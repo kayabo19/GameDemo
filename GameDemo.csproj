@@ -243,8 +243,8 @@
     </Compile>
     <Compile Include="Game\Game.cs" />
     <Compile Include="Game\IKampanyaService.cs" />
-    <Compile Include="IPlayerCheckService.cs" />
-    <Compile Include="MernisServiceAdapter.cs" />
+    <Compile Include="PlayerCheck\IPlayerCheckService.cs" />
+    <Compile Include="PlayerCheck\MernisServiceAdapter.cs" />
     <Compile Include="Player\IPlayerManager.cs" />
     <Compile Include="Sale\ISaleManager.cs" />
     <Compile Include="Game\Kampanya.cs" />
@@ -302,9 +302,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\MernisServiceReference\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PlayerCheck\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
