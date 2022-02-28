@@ -11,7 +11,7 @@ namespace GameDemo
         public string Ad { get; set; }
         public string Soyad { get; set; }
 
-        public string TCNo { get; set; }
+        public long TCNo { get; set; }
 
         public int DogumYili { get; set; }  
 

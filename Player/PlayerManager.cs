@@ -6,17 +6,28 @@ using System.Threading.Tasks;
 
 namespace GameDemo
 {
-    internal class PlayerManager : IPlayerManager, IPlayerCheckService
+    internal class PlayerManager : IPlayerManager
     {
+        private IPlayerCheckService _playerCheckService;
+
+        public PlayerManager(IPlayerCheckService playerCheckService)
+        {
+            _playerCheckService = playerCheckService;   
+        }
 
         public void KayıtOl(Player player)
         {
             
-            if (CheckIfRealPlayer(player))
+            if (_playerCheckService.CheckIfRealPlayer(player))
             {
-
+                
                 Console.WriteLine("Kayıt oldu:"+" "+player.Ad);
 
+            }
+
+            else
+            {
+                Console.WriteLine("Hatalı Giriş");
             }
             
 

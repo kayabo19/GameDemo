@@ -13,7 +13,8 @@ namespace GameDemo
             Player player1 = new Player();
             player1.Ad = "Bora";
             player1.Soyad = "Kaya";
-            player1.TCNo = "2222222222";
+            player1.DogumYili = 2001;
+            player1.TCNo = 25447086955;
             player1.ID = "042132151665";
 
             Game game1 = new Game();
@@ -37,10 +38,10 @@ namespace GameDemo
 
 
 
-            PlayerManager playerManager = new PlayerManager();
+            PlayerManager playerManager = new PlayerManager(new MernisServiceAdapter());
 
             playerManager.KayıtOl(player1);
-            playerManager.Guncelle(player1);
+             playerManager.Guncelle(player1);
             kampanyaService.KampanyaEkle(yaz);
             kampanyaService.KampanyaSil(ilkbahar);
             saleManager.SatınAl(player1, game1,yaz);
